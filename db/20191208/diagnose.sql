@@ -1,0 +1,136 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 08, 2019 at 03:07 AM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.3.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `phw_database`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `diagnose`
+--
+
+CREATE TABLE `diagnose` (
+  `id_diagnose` int(11) NOT NULL,
+  `id_patients` int(11) NOT NULL,
+  `reference_no` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `doctor_diagnose` text COLLATE utf8_bin DEFAULT NULL,
+  `doctor_management` text COLLATE utf8_bin DEFAULT NULL,
+  `problem` text COLLATE utf8_bin DEFAULT NULL,
+  `pain_scale` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `area` text COLLATE utf8_bin DEFAULT NULL,
+  `nature` text COLLATE utf8_bin DEFAULT NULL,
+  `agg` text COLLATE utf8_bin DEFAULT NULL,
+  `ease` text COLLATE utf8_bin DEFAULT NULL,
+  `hours` text COLLATE utf8_bin DEFAULT NULL,
+  `irrirability_id` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `general_health` text COLLATE utf8_bin DEFAULT NULL,
+  `pmhx_surgery` text COLLATE utf8_bin DEFAULT NULL,
+  `mri_xray` text COLLATE utf8_bin DEFAULT NULL,
+  `medication_steroid` text COLLATE utf8_bin DEFAULT NULL,
+  `occupation_recreation` text COLLATE utf8_bin DEFAULT NULL,
+  `current_history` text COLLATE utf8_bin DEFAULT NULL,
+  `past_history` text COLLATE utf8_bin DEFAULT NULL,
+  `observation` text COLLATE utf8_bin DEFAULT NULL,
+  `palpation` text COLLATE utf8_bin DEFAULT NULL,
+  `movement_join` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `movement_join_des` text COLLATE utf8_bin DEFAULT NULL,
+  `special_test` text COLLATE utf8_bin DEFAULT NULL,
+  `neurological_motor` text COLLATE utf8_bin DEFAULT NULL,
+  `neurological_seasation` text COLLATE utf8_bin DEFAULT NULL,
+  `neurological_reflexes` text COLLATE utf8_bin DEFAULT NULL,
+  `clearing_test_other_joins` text COLLATE utf8_bin DEFAULT NULL,
+  `physiotherapist_impression` text COLLATE utf8_bin DEFAULT NULL,
+  `short_term_goals` text COLLATE utf8_bin DEFAULT NULL,
+  `long_term_goals` text COLLATE utf8_bin DEFAULT NULL,
+  `plan_of_treatment` text COLLATE utf8_bin DEFAULT NULL,
+  `treatment_status_id` int(11) DEFAULT NULL,
+  `need_treatment` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `type_department` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT '1998-12-31 16:00:00',
+  `id_package` int(11) DEFAULT NULL,
+  `total_payment` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `id_type_session` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `id_session_category` int(11) DEFAULT NULL,
+  `total_session` int(11) DEFAULT NULL,
+  `price_session` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `current_session` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `diagnose`
+--
+
+INSERT INTO `diagnose` (`id_diagnose`, `id_patients`, `reference_no`, `doctor_diagnose`, `doctor_management`, `problem`, `pain_scale`, `area`, `nature`, `agg`, `ease`, `hours`, `irrirability_id`, `general_health`, `pmhx_surgery`, `mri_xray`, `medication_steroid`, `occupation_recreation`, `current_history`, `past_history`, `observation`, `palpation`, `movement_join`, `movement_join_des`, `special_test`, `neurological_motor`, `neurological_seasation`, `neurological_reflexes`, `clearing_test_other_joins`, `physiotherapist_impression`, `short_term_goals`, `long_term_goals`, `plan_of_treatment`, `treatment_status_id`, `need_treatment`, `created_by`, `type_department`, `created_at`, `updated_at`, `id_package`, `total_payment`, `id_type_session`, `id_session_category`, `total_session`, `price_session`, `current_session`) VALUES
+(30, 16, 'FLPT00002', 'Sakit Pinggang', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:25:06', '2019-09-15 23:43:15', NULL, NULL, '3', NULL, NULL, NULL, 0),
+(31, 21, 'FLPT00003', 'Mucus removal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:25:04', '2019-09-16 03:46:56', NULL, NULL, '2', NULL, NULL, NULL, 0),
+(32, 21, 'FLPT00006', 'Ankle Dislocate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:25:02', '2019-09-26 05:59:57', NULL, NULL, '1', NULL, NULL, NULL, 1),
+(37, 19, 'FLPT00007', 'Testing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:25:00', '2019-09-28 01:20:51', NULL, NULL, '1', NULL, NULL, NULL, NULL),
+(38, 21, 'FLPT00010', 'Head banging', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:55', '2019-09-25 09:21:44', NULL, NULL, '4', NULL, NULL, NULL, 0),
+(39, 21, 'FLPT00007', 'RMA', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:53', '2019-09-26 06:15:59', NULL, NULL, '1', NULL, NULL, NULL, 0),
+(40, 21, 'FLPT00008', 'Sakit Otak', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:57', '2019-10-09 03:42:56', NULL, NULL, '1', NULL, NULL, NULL, 0),
+(41, 21, 'FLPT00009', 'sakit otak', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:51', '2019-10-09 03:46:38', NULL, NULL, '1', NULL, NULL, NULL, 0),
+(42, 21, 'FLPT00010', 'Haa Tepuk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 12:13:07', '2019-10-09 04:13:07', NULL, NULL, '1', NULL, 10, NULL, 0),
+(43, 21, 'FLPT00011', 'Haa Tepuk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 12:22:14', '2019-10-09 04:22:14', NULL, NULL, '1', NULL, 10, NULL, 0),
+(44, 21, 'FLPT00012', 'Haa Tepuk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 12:22:30', '2019-10-09 04:22:30', NULL, NULL, '1', NULL, 10, NULL, 0),
+(45, 21, 'FLPT00013', 'Haa Tepuk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 12:24:47', '2019-10-09 04:24:47', NULL, NULL, '1', NULL, 10, NULL, 1),
+(46, 21, 'FLPT00014', 'Haa Tepuk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 12:47:32', '2019-10-09 04:47:32', NULL, '200', '1', NULL, 10, NULL, 3),
+(47, 21, 'FLPT00015', 'Sakit Perut', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-09 13:04:24', '2019-10-09 05:04:24', NULL, '800', '1', NULL, 10, '8000', 5),
+(48, 21, NULL, 'sakitotot', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:48', '2019-10-09 05:04:52', NULL, NULL, '2', NULL, NULL, NULL, 0),
+(49, 21, 'FLPT00017', 'sakitotot', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-22 13:24:46', '2019-10-09 05:05:29', NULL, NULL, '2', NULL, NULL, NULL, 0),
+(50, 16, 'FLPT00018', 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 03:39:52', '2019-12-03 19:39:52', NULL, NULL, '[\"9\",\"8\",\"7\",\"11\"]', NULL, NULL, NULL, 0),
+(51, 21, 'FLPT00019', 'Test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 12:03:31', '2019-12-04 04:03:31', NULL, NULL, '[\"9\",\"8\",\"7\"]', NULL, NULL, NULL, 0),
+(52, 21, 'FLPT00020', 'Test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 12:05:33', '2019-12-04 04:05:33', NULL, NULL, '[\"9\",\"8\",\"7\"]', NULL, NULL, NULL, 0),
+(53, 21, 'FLPT00021', 'Test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 12:06:07', '2019-12-04 04:06:07', NULL, NULL, '[\"9\",\"8\",\"7\"]', NULL, NULL, NULL, 0),
+(54, 21, 'FLPT00022', 'Test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 12:27:06', '2019-12-04 04:27:06', NULL, NULL, '[\"8\",\"7\",\"11\"]', NULL, NULL, NULL, 0),
+(55, 23, 'FLPT00023', 'Test832', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 12:32:39', '2019-12-04 04:32:39', NULL, NULL, '[\"11\",\"12\",\"10\"]', NULL, NULL, NULL, 0),
+(56, 23, 'FLPT00024', 'Test955', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-04 13:55:33', '2019-12-04 05:55:33', NULL, NULL, '[\"11\",\"12\"]', 1, NULL, NULL, 0),
+(57, 23, 'FLPT00025', 'Test Session', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-05 17:39:35', '2019-12-05 09:39:35', NULL, NULL, NULL, 2, 10, '1000', 1),
+(58, 23, 'FLPT00026', 'Test Session', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-05 17:42:41', '2019-12-05 09:42:41', NULL, NULL, NULL, 2, 10, '1000', 1),
+(59, 23, 'FLPT00027', 'Testing Housecall', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-05 17:44:01', '2019-12-05 09:44:01', NULL, NULL, NULL, 3, NULL, NULL, 0),
+(60, 21, 'FLPT00028', 'Testing 156', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-05 17:56:35', '2019-12-05 09:56:35', NULL, NULL, NULL, 3, NULL, NULL, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `diagnose`
+--
+ALTER TABLE `diagnose`
+  ADD PRIMARY KEY (`id_diagnose`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `diagnose`
+--
+ALTER TABLE `diagnose`
+  MODIFY `id_diagnose` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

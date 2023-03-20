@@ -1,0 +1,29 @@
+.noBorderTop{
+	border-top: 0 !important;
+}
+.noBorderBottom{
+	border-bottom: 0 !important;
+}
+.noBorderLeft{
+	border-left: 0 !important;
+}
+.noBorderRight{
+	border-right: 0 !important;
+}
+.page-break{
+	page-break-after: always;
+}
+.borderBtmBlack{
+	border-bottom: 1px solid #000000 !important;
+}
+.yellopdf{
+	background-color:#FFFF00 !important;
+}
+
+.blackpdf{
+	background-color:#000000 !important;
+}
+.redpdf{
+	background-color:#FF0000 !important;
+}
+

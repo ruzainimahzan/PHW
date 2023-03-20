@@ -1,0 +1,22 @@
+CENTER
+Register Patient -> Center
+1. Age [Auto Calculate]
+2. Address (Optional)
+3. Sort Default (Date) [DONE]
+
+Walk-In
+1. PNT -> PT
+2. Type of Treatment[Radio button] -> select multiple
+   Add::1. Others
+	2. Nebulizer
+
+
+PHYSIO
+1. Assign-Patient Page [edit summary report]
+
+NURSING
+1. Add roster
+   i.   Patient Name
+   ii.  Staff
+   iii. Time
+	
